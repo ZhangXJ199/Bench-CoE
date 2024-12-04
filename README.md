@@ -137,9 +137,9 @@ Our framework demonstrates strong generalization capabilities across different d
 - Robust performance in both language and multimodal domains
 - Demonstrates the scalability of benchmark-driven expert construction
 
-<!-- </details>
+</details>
 
-
+<!-- 
 ### Key Insights
 
 1. **Pioneering Subject-Level Framework**:
