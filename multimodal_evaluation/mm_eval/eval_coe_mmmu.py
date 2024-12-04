@@ -109,7 +109,18 @@ def classify_question(question, bert_model, tokenizer):
     
     logits = outputs.logits
     predicted_class_id = torch.argmax(logits, dim=1).item()
-    return predicted_class_id
+    if predicted_class_id in [3, 4, 10, 24]:
+        return 0 #Art
+    elif predicted_class_id in [0, 12, 15, 19, 20]:
+        return 1 #Business
+    elif predicted_class_id in [5, 8, 11, 25, 28]:
+        return 2 #Health
+    elif predicted_class_id in [17, 18, 27, 29]:
+        return 3 #Humanities
+    elif predicted_class_id in [6, 7, 16, 22, 26]:
+        return 4 #Sci
+    elif predicted_class_id in [1, 2, 9, 13, 14, 21, 23]:
+        return 5 #Tech
 
 
 def eval_model(args):
