@@ -2,8 +2,9 @@
 
 <div align="center">
 
-[![Paper](https://img.shields.io/badge/Paper-Arxiv-blue)]()
+[![Paper](https://img.shields.io/badge/Paper-Arxiv-blue)](https://arxiv.org/abs/2412.04167)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green)]()
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-black)](https://github.com/ZhangXJ199/Bench-CoE/tree/main)
 
 </div>
 
