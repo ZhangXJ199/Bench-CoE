@@ -8,6 +8,11 @@
 
 </div>
 
+##  News
+
+- [2024-12] 🎉🎉 Our arXiv paper has been published. [arXiv Paper](https://arxiv.org/abs/2412.04167)
+- [2024-12] 🔈🔊 Our Bench-CoE repository has been established. Currently, only inference code is included. [GitHub Repository](https://github.com/ZhangXJ199/Bench-CoE/tree/main)
+
 ## 📌 About
 
 Bench-CoE introduces a novel framework for expert collaboration through benchmark-driven approaches. This work pioneers subject-level expert collaboration, moving beyond traditional query-level methods to achieve more efficient and generalizable model cooperation.
