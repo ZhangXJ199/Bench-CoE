@@ -270,10 +270,13 @@ CUDA_VISIBLE_DEVICES=0 bash scripts/eval_coe_mmmu.sh
 
 ## 📚 Citation
 ```bibtex
-@inproceedings{anonymous2025bench,
-  title={Bench-CoE: A Framework for Collaboration of Experts from Benchmark},
-  author={},
-  booktitle={Arxiv},
-  year={2025}
+@misc{wang2024benchcoeframeworkcollaborationexperts,
+      title={Bench-CoE: a Framework for Collaboration of Experts from Benchmark}, 
+      author={Yuanshuai Wang and Xingjian Zhang and Jinkun Zhao and Siwei Wen and Peilin Feng and Shuhao Liao and Lei Huang and Wenjun Wu},
+      year={2024},
+      eprint={2412.04167},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2412.04167}, 
 }
 ```
