@@ -11,8 +11,14 @@
 4. Modify the paths for the models and the router in the code.
 
 5. Run the command and select the corresponding task to test coemodel:
-   ```Shell
-   CUDA_VISIBLE_DEVICES=0 python3 -m accelerate.commands.launch --num_processes=8 -m lmms_eval --model coemodel --model_args pretrained="None" --tasks name --batch_size 1 --log_samples --log_samples_suffix coemodel --output_path ./logs/
+   ```bash
+   CUDA_VISIBLE_DEVICES=0 python3 -m accelerate.commands.launch \
+      --num_processes=8 -m lmms_eval \
+      --model coemodel \
+      --model_args pretrained="None" \
+      --tasks name --batch_size 1 \
+      --log_samples --log_samples_suffix coemodel \
+      --output_path ./logs/
    ```
 
 Note: As long as the selected model and task are supported by lmm-eval, you only need to make the necessary modifications in `coemodel.py`.

@@ -145,20 +145,6 @@ Our framework demonstrates strong generalization capabilities across different d
 
 </details>
 
-<!-- 
-### Key Insights
-
-1. **Pioneering Subject-Level Framework**:
-   - First to propose subject-level expert collaboration beyond traditional query-level approaches
-   - Demonstrates superior generalization to out-of-distribution tasks
-
-2. **Progressive Performance**:
-
-   - Excellent performance and Effective cross-domain transfer in both language and multimodal tasks
-
-3. **Practical Efficiency**:
-   - Lightweight implementation with minimal computational overhead -->
-
 
 ## 🛠️ Settings
 
