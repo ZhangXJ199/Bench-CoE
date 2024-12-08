@@ -253,6 +253,14 @@ CUDA_VISIBLE_DEVICES=0 python3 -m accelerate.commands.launch \
 
 1. **Environment Setup**
 - Install TinyLLaVA_Factory and Bunny
+```bash
+# Create and activate environment
+conda create -n bench-coe python=3.10 -y
+conda activate bench-coe
+cd /path/to/your/Bench-CoE/multimodal_evaluation/mm_eval/TinyLLaVA_Factory
+pip install -e .
+pip install xformers==0.0.20
+```
 - Prepare required datasets
 
 2. **Model Setup**
