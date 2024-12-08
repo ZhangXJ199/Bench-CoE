@@ -20,6 +20,14 @@ Note: As long as the selected model and task are supported by lmm-eval, you only
 ## Test CoE model by yourself(case):
 
 1. Install the environment based on [TinyLLaVA_Factory](https://github.com/TinyLLaVA/TinyLLaVA_Factory) and [Bunny](https://github.com/BAAI-DCAI/Bunny), prepare the corresponding dataset.
+```bash
+# Create and activate environment
+conda create -n bench-coe python=3.10 -y
+conda activate bench-coe
+cd /path/to/your/Bench-CoE/multimodal_evaluation/mm_eval/TinyLLaVA_Factory
+pip install -e .
+pip install xformers==0.0.20
+```
 
 2. Train the router(Bert) using the MMMU dataset.
 
