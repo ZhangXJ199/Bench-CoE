@@ -160,7 +160,7 @@ import torch.nn.functional as F
 try:
     from timm.models.layers import drop_path, to_2tuple, trunc_normal_
 except:
-    from timm.layers import drop_path, to_2tuple, trunc_normal_
+    from timm.models.layers import drop_path, to_2tuple, trunc_normal_
 
 if os.getenv('ENV_TYPE') == 'deepspeed':
     try:

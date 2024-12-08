@@ -2,7 +2,7 @@ import re
 import math
 from torch import nn
 from functools import partial
-from timm.layers.norm_act import LayerNormAct2d
+from timm.models.layers.norm_act import LayerNormAct2d
 from torchvision.ops.misc import SqueezeExcitation as SELayer
 from torchvision.models.mobilenetv3 import InvertedResidual, InvertedResidualConfig
 
