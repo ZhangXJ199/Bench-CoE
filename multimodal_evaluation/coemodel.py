@@ -28,24 +28,9 @@ fine_class_list = ['Accounting', 'Agriculture', 'Architecture_and_Engineering', 
                    'Physics', 'Psychology', 'Public_Health', 'Sociology']
 fine_class_mapping = {i: fine_class for i, fine_class in enumerate(fine_class_list)}
 
-"""
-fine_class_list = ['/data/vlm/coe/model/InternVL2-8B',
-                   '/data/vlm/coe/model/MiniCPM-V-2_6',
-                   '/data/vlm/coe/model/llava-onevision-qwen2-7b-ov']
-fine_class_mapping = {i: fine_class for i, fine_class in enumerate(fine_class_list)}
-"""
-
 model_lib = ['/data/vlm/coe/model/MiniCPM-V-2_6',
              '/data/vlm/coe/model/InternVL2-8B',
              '/data/vlm/coe/model/llava-onevision-qwen2-7b-ov']
-"""
-#mmmmu_xld
-subject_id_mapping={
-    '/data/vlm/coe/model/InternVL2-8B' : 1,
-    '/data/vlm/coe/model/MiniCPM-V-2_6' : 0,
-    '/data/vlm/coe/model/llava-onevision-qwen2-7b-ov' : 2,
-}
-"""
 
 #mmmu_test
 subject_id_mapping={
@@ -80,42 +65,6 @@ subject_id_mapping={
             'Public_Health' : 1,
             'Sociology' : 1,
         }
-
-"""
-#mmmu_val
-subject_id_mapping={
-            'Accounting' : 0,
-            'Agriculture' : 1,
-            'Architecture_and_Engineering' : 2,
-            'Art' : 1, 
-            'Art_Theory' : 0,
-            'Basic_Medical_Science' : 0,
-            'Biology' : 1,
-            'Chemistry' : 2,
-            'Clinical_Medicine' : 2,
-            'Computer_Science' : 1,
-            'Design' : 1,
-            'Diagnostics_and_Laboratory_Medicine' : 1,
-            'Economics' : 2, 
-            'Electronics' : 1,
-            'Energy_and_Power' : 2,
-            'Finance' : 1,
-            'Geography' : 2,
-            'History' : 1,
-            'Literature' : 2,
-            'Manage' : 2,
-            'Marketing' : 1,
-            'Materials' : 2,
-            'Math' : 1,
-            'Mechanical_Engineering' : 0,
-            'Music' : 1,
-            'Pharmacy' : 0,
-            'Physics' : 0,
-            'Psychology' : 0,
-            'Public_Health' : 1,
-            'Sociology' : 1,
-        }
-"""
 
 @register_model("coemodel")
 class COEModel(lmms):
