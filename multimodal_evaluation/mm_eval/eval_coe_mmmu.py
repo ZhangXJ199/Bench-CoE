@@ -20,6 +20,8 @@ from PIL import Image
 import math
 from transformers import BertTokenizer, BertForSequenceClassification
 
+bunny_subject = [0, 1, 3, 5, 6, 7, 9, 10, 12, 14, 17, 18, 19, 24, 27, 29]
+tinyllava_subject = [2, 4, 8, 11, 13, 15, 16, 20, 21, 22, 23, 25, 26, 28]
 
 def split_list(lst, n):
     chunk_size = math.ceil(len(lst) / n)
@@ -109,18 +111,7 @@ def classify_question(question, bert_model, tokenizer):
     
     logits = outputs.logits
     predicted_class_id = torch.argmax(logits, dim=1).item()
-    if predicted_class_id in [3, 4, 10, 24]:
-        return 0 #Art
-    elif predicted_class_id in [0, 12, 15, 19, 20]:
-        return 1 #Business
-    elif predicted_class_id in [5, 8, 11, 25, 28]:
-        return 2 #Health
-    elif predicted_class_id in [17, 18, 27, 29]:
-        return 3 #Humanities
-    elif predicted_class_id in [6, 7, 16, 22, 26]:
-        return 4 #Sci
-    elif predicted_class_id in [1, 2, 9, 13, 14, 21, 23]:
-        return 5 #Tech
+    return predicted_class_id
 
 
 def eval_model(args):
@@ -145,7 +136,7 @@ def eval_model(args):
         predicted_class_id = classify_question(question, bert_model, bert_tokenizer)
         #print("predicted_class_id:",predicted_class_id)
 
-        if predicted_class_id in [2]:  #tinyllava: 'Health:2'
+        if predicted_class_id in tinyllava_subject:
             model_path = args.model1_path
             model = tinyllava_model
             tokenizer = tinyllava_tokenizer
@@ -157,7 +148,6 @@ def eval_model(args):
 
             if "image" in line:
                 image_file = line["image"]
-                #print("image_file:",image_file)
                 image = Image.open(os.path.join(args.image_folder, image_file)).convert("RGB")
                 image_sizes = [image.size]
                 image = image_processor(image)
@@ -194,7 +184,7 @@ def eval_model(args):
                     else:
                         outputs = "INVALID GENERATION FOR MULTIPLE IMAGE INPUTS"
         
-        elif predicted_class_id in [0, 1, 3, 4, 5]:  #bunny-4B: 'Business:1', 'Humanities:3'
+        elif predicted_class_id in bunny_subject:
             model_path = args.model2_path
             model = bunny4b_model
             tokenizer = bunny4b_tokenizer
@@ -202,7 +192,6 @@ def eval_model(args):
 
             if "image" in line:
                 image_file = line["image"]
-                #print("image_file:",image_file)
                 image = Image.open(os.path.join(args.image_folder, image_file)).convert("RGB")
                 images = process_images([image], image_processor, model.config)[0]
             else:
