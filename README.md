@@ -10,8 +10,8 @@
 
 ##  News
 
-- [2024-12] 🎉🎉 Our arXiv paper has been published. [arXiv Paper](https://arxiv.org/abs/2412.04167)
-- [2024-12] 🔈🔊 Our Bench-CoE repository has been established. Currently, only inference code is included. [GitHub Repository](https://github.com/ZhangXJ199/Bench-CoE/tree/main)
+- [2024-12] 🎉 Our arXiv paper has been published. [arXiv Paper](https://arxiv.org/abs/2412.04167)
+- [2024-12] 🔊 Our Bench-CoE repository has been established. Currently, only inference code is included. [GitHub Repository](https://github.com/ZhangXJ199/Bench-CoE/tree/main)
 
 ## 📌 About
 
