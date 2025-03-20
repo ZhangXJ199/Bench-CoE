@@ -220,7 +220,7 @@ python eval_winogrand_vllm_query.py
 - Set up the selected model environment
 
 2. **Model Setup**
-- Download pre-trained router model from anonymous/subject_bert_mmmu
+- Download pre-trained router model from [subject_bert_mmmu](https://huggingface.co/Zhang199/subject_bert_mmmu)
 - Place `coemodel.py` in `.lmms_eval/models`
 - Modify 'AVAILABLE_MODELS' list in `__init__.py`
 
